@@ -551,7 +551,7 @@ if __name__ == '__main__':
                                  '/kaggle/input/json-data/I2T_Label_Valid.jsonl'])
 
     parser.add_argument("--label_conditioned_test_dataset", type=str,
-                        default='/kaggle/input/json-data/I2T_Label_Test_openi.jsonl',
+                        default='/kaggle/input/json-data/T2I_Label_Test_openi.jsonl',
                         help='label conditioned test dataset for evaluating the model',
                         choices=['/kaggle/input/json-data/T2I_Label_Test.jsonl',
                                  '/kaggle/input/json-data/I2T_Label_Test.jsonl',
@@ -582,7 +582,7 @@ if __name__ == '__main__':
 
     # do_train -> load_pretrained_model: Pre-trained CXR-BERT
     # do_test -> load_pretrained_model: saved CXRBertForRetrieval model path
-    parser.add_argument("--load_pretrained_model", type=str, default='/kaggle/input/s2s/pytorch/default/1/s2s')  
+    parser.add_argument("--load_pretrained_model", type=str, default='/kaggle/input/bi/pytorch/default/1/bi')  
 
     # TODO: Model size, both CXRBERT and CNN_BERT
     parser.add_argument("--bert_model", type=str, default="bert-base-scratch")
